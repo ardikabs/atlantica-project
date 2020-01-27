@@ -7,7 +7,7 @@ projects:
   autoplan:
     when_modified: ["*.tf"]
     enabled: true
-  apply_requirements: [approved, mergeable]
+  apply_requirements: [mergeable]
   workflow: custom
 - name: k8s-the-hard-way-network
   dir: k8s-the-hard-way-network
@@ -15,7 +15,7 @@ projects:
   autoplan:
     when_modified: ["*.tf"]
     enabled: true
-  apply_requirements: [approved, mergeable]
+  apply_requirements: [mergeable]
   workflow: custom
 workflows:
   custom:
