@@ -1,21 +1,21 @@
 version: 3
 automerge: true
 projects:
-- name: Kubernetes The Hard Way Compute Engine
+- name: k8s-the-hard-way-compute-engine
   dir: k8s-the-hard-way
   workspace: default
   autoplan:
     when_modified: ["*.tf"]
     enabled: true
-  apply_requirements: [approved]
+  apply_requirements: [mergeable]
   workflow: custom
-- name: Kubernetes The Hard Way Network
+- name: k8s-the-hard-way-network
   dir: k8s-the-hard-way-network
   workspace: default
   autoplan:
     when_modified: ["*.tf"]
     enabled: true
-  apply_requirements: [approved]
+  apply_requirements: [mergeable]
   workflow: custom
 workflows:
   custom:
@@ -23,8 +23,7 @@ workflows:
       steps:
       - init
       - plan:
-          extra_args: ["-var-file", "gcp.tfvars"]
+          extra_args: ["-var-file", "../gcp.tfvars"]
     apply:
       steps:
-      - apply:
-          extra_args: ["-var-file", "gcp.tfvars"]
+      - apply

@@ -8,7 +8,7 @@ prefix_name = "kube"
 project = {
   name = "production-257013"
   region = "asia-southeast1"
-  credential = "accounts.json"
+  credential = "/etc/accounts.json"
 
 }
 
