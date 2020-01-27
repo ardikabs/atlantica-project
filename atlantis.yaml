@@ -1,7 +1,7 @@
 version: 3
 automerge: true
 projects:
-- name: Kubernetes The Hard Way Compute Engine
+- name: k8s-the-hard-way-compute-engine
   dir: k8s-the-hard-way
   workspace: default
   autoplan:
@@ -9,7 +9,7 @@ projects:
     enabled: true
   apply_requirements: [approved]
   workflow: custom
-- name: Kubernetes The Hard Way Network
+- name: k8s-the-hard-way-network
   dir: k8s-the-hard-way-network
   workspace: default
   autoplan:
