@@ -26,5 +26,4 @@ workflows:
           extra_args: ["-var-file", "../gcp.tfvars"]
     apply:
       steps:
-      - apply:
-          extra_args: ["-var-file", "../gcp.tfvars"]
+      - apply
